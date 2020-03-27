@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 24828896}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -237,6 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+  rb: {fileID: 0}
+  OnTheGround: 1
 --- !u!54 &350132714
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -504,6 +506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152900512718847405, guid: 214970e94ed976d47a4c2c844a3f185f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9152900512718847406, guid: 214970e94ed976d47a4c2c844a3f185f,
         type: 3}

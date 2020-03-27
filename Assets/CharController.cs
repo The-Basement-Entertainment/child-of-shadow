@@ -7,11 +7,15 @@ public class CharController : MonoBehaviour
     [SerializeField]
     float moveSpeed = 4f;
 
+    public Rigidbody rb;
+    public bool OnTheGround = true;
+
     Vector3 forward, right;
 
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
@@ -23,6 +27,12 @@ public class CharController : MonoBehaviour
     {
         if (Input.anyKey)
             Move();
+
+        if(Input.GetButtonDown("Jump") && OnTheGround)
+        {
+            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+            OnTheGround = false;
+        }
     }
 
     void Move() 
@@ -36,5 +46,13 @@ public class CharController : MonoBehaviour
         transform.forward = heading;
         transform.position += rightMovement;
         transform.position += upMovement;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            OnTheGround = true;
+        }
     }
 }
