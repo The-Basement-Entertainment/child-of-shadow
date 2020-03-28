@@ -19,7 +19,7 @@ public class CharController : MonoBehaviour
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
-        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward; 
+        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
 
     }
 
@@ -28,16 +28,12 @@ public class CharController : MonoBehaviour
         if (Input.anyKey)
             Move();
 
-        if(Input.GetButtonDown("Jump") && OnTheGround)
-        {
-            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
-            OnTheGround = false;
-        }
+
     }
 
-    void Move() 
+    void Move()
     {
-        Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+        // Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
         Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
         Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
 
@@ -46,6 +42,12 @@ public class CharController : MonoBehaviour
         transform.forward = heading;
         transform.position += rightMovement;
         transform.position += upMovement;
+
+        if(Input.GetButtonDown("Jump") && OnTheGround)
+        {
+            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+            OnTheGround = false;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
