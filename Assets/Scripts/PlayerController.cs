@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
     public float gravity = 20.0f;
     private CharacterController characterController;
     private Vector3 moveDirection = Vector3.zero;
-    public Vector3 frente = Vector3.zero;
+
+    // public Vector3 frente = Vector3.zero;
     void Start()
     {
       characterController = GetComponent<CharacterController>();
@@ -16,10 +17,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-      if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-      {
-        frente = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-      }
 
       if (characterController.isGrounded)
       {
@@ -32,7 +29,6 @@ public class PlayerController : MonoBehaviour
         }
       }
 
-      transform.forward = frente;
       // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
       // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
       // as an acceleration (ms^-2)

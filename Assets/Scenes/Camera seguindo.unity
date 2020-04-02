@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 632786715}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6723dce2d1ce7924db4a6c9ad2e82f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worldPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &632786715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,7 +661,6 @@ MonoBehaviour:
   moveSpeed: 4
   jumpSpeed: 8
   gravity: 20
-  frente: {x: 0, y: 0, z: 0}
 --- !u!143 &632786716
 CharacterController:
   m_ObjectHideFlags: 0
@@ -691,7 +691,6 @@ GameObject:
   - component: {fileID: 695728903}
   - component: {fileID: 695728902}
   - component: {fileID: 695728900}
-  - component: {fileID: 695728901}
   - component: {fileID: 695728905}
   m_Layer: 0
   m_Name: Sphere
@@ -713,18 +712,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &695728901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695728899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6723dce2d1ce7924db4a6c9ad2e82f4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &695728902
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1442,7 +1429,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570659456}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: de3fc749a6b2bc842a5670c4b4946d72, type: 3}
