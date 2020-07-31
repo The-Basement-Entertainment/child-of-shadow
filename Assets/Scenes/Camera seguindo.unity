@@ -2558,12 +2558,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_StatsMultiplier: 1.75
-  m_Strength: 3
+  m_Strength: 4
   m_Intelligence: 20
   m_Faith: 3
   m_DetectionRadius: 12.896748
-  m_AttackRange: 2.233703
-  m_DamageAngle: 70.5106
+  m_AttackRange: 2.45
+  m_DamageAngle: 66
   canAttack: 1
   enemyTags:
   - Player
@@ -2690,7 +2690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632786709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.669, y: 1.6573625, z: 2.978}
+  m_LocalPosition: {x: 4.669, y: 1.68, z: 2.978}
   m_LocalScale: {x: 0.43261263, y: 0.66353333, z: 0.45048}
   m_Children:
   - {fileID: 2130069910}
@@ -2805,7 +2805,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: -0.98, z: 0}
+  m_Center: {x: 0, y: -1.14, z: 0}
 --- !u!114 &632786717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2818,7 +2818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cab10dae043e404da55ff2834532deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 50
+  playerHealth: 25
 --- !u!1 &769074243
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,6 +3098,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &869684630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7114577863419070732, guid: 947050d8974edba49a720d9746aa715b,
+    type: 3}
+  m_PrefabInstance: {fileID: 345147765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &869684631
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869684630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4560003, y: 0.676172, z: 2.714215}
+  m_Center: {x: 3.7886722, y: 1.025356, z: 1.3744146}
 --- !u!1 &888326768
 GameObject:
   m_ObjectHideFlags: 0
@@ -4051,9 +4070,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: de3fc749a6b2bc842a5670c4b4946d72, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7001c95532142c04a817b21a62aa733a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
